@@ -1,0 +1,94 @@
+site_name: flowpyter-task
+repo_name: "Flowminder/flowpyter-task"
+repo_url: https://github.com/Flowminder/flowpyter-task
+docs_dir: source
+site_dir: flowpyter-task-docs
+edit_uri: ""
+plugins:
+  - mike
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [../src]
+          options:
+            docstring_style: numpy
+
+nav:
+  - index.md
+  - install.md
+  - usage.md
+  - api.md
+  - license.md
+  - changelog.md
+
+theme:
+  name: "material"
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - navigation.tabs
+    - content.tabs.link
+    - content.code.annotate
+  palette:
+    accent: "#095798"
+    primary: "#2977B8"
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/scatter-plot
+# Extensions
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - markdown.extensions.admonition
+  - codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+
+extra_css:
+  - "stylesheets/extra.css"
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: "https://github.com/Flowminder"
+  version:
+    provider: mike
