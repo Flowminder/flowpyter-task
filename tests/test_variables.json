@@ -1,0 +1,8 @@
+{
+  "HOST_NOTEBOOK_OUT_DIR": "/home/john/projects/flowpyter-task/tests/notebooks_out",
+  "HOST_DAGRUN_DATA_DIR": "/home/john/projects/flowpyter-task/tests/dag_data",
+  "HOST_NOTEBOOK_DIR": "/home/john/projects/flowpyter-task/tests/notebooks",
+  "HOST_STATIC_DIR": "/home/john/projects/flowpyter-task/tests/static",
+  "notebook_uid": 1000,
+  "notebook_gid": 998
+}

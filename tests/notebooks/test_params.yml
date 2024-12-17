@@ -1,0 +1,7 @@
+input: DEADBEEF
+double_quote_escape_test: 'a string with a "double quote" '
+single_quote_escape_test: "a string with a 'single quote' "
+no_quote_escape_test: a string with "no surrounding quotes" here
+no_quote_escape_test_2: another string with 'no surrounding  quotes' here.
+no_quote_escape_test_3: and a string with one ' quote inside
+no_quote_escape_test_4: and another with one " inside
