@@ -1,3 +1,0 @@
-src/flowpyter-task/_version.py export-subst
-src/_version.py export-subst
-src/flowpytertask/_version.py export-subst
