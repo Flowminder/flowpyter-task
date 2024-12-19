@@ -409,6 +409,7 @@ def test_ipynb_check(base_dag, tmp_out_dir, fp_op_with_defaults):
 
 def test_reserved_param_check(base_dag, fp_op_with_defaults):
     from airflow.utils.state import DagRunState
+
     base_dag.on_failure_callback = None
     fp_op_with_defaults(
         dag=base_dag,
@@ -452,6 +453,7 @@ def test_bad_param_dag(base_dag, default_folder_params):
     from flowpytertask import FlowpyterOperator, BadParameterError
 
     from airflow.utils.state import DagRunState
+
     base_dag.on_failure_callback = None
     FlowpyterOperator(
         dag=base_dag,
@@ -460,14 +462,16 @@ def test_bad_param_dag(base_dag, default_folder_params):
         notebook_name="test_nb.ipynb",
         nb_params={"no good": "dummy"},
     )
-    dagrun = base_dag.test(execution_date = EXECUTION_DATE)
+    dagrun = base_dag.test(execution_date=EXECUTION_DATE)
     assert dagrun.state == DagRunState.FAILED
 
 
 def test_bad_mount_dag(base_dag, default_folder_params):
     from flowpytertask import FlowpyterOperator, BadParameterError
+
     base_dag.on_failure_callback = None
     from airflow.utils.state import DagRunState
+
     FlowpyterOperator(
         dag=base_dag,
         task_id="bad_param_task",
@@ -475,7 +479,7 @@ def test_bad_mount_dag(base_dag, default_folder_params):
         notebook_name="test_nb.ipynb",
         read_only_mounts={"no good": "dummy"},
     )
-    dagrun = base_dag.test(execution_date = EXECUTION_DATE)
+    dagrun = base_dag.test(execution_date=EXECUTION_DATE)
     assert dagrun.state == DagRunState.FAILED
 
 
