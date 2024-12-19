@@ -34,6 +34,6 @@ with DAG(
         task_id="all_task",
         requires_flowapi=True,
         requires_flowdb=True,
-        network_mode='container:flowapi'
+        network_mode="container:flowapi",
     )
     flowapi_task >> flowmachine_task >> all_task
