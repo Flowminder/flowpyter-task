@@ -161,9 +161,9 @@ class PapermillOperator(DockerOperator):
         param_string = "-b {{macros.flowpytertask.b64_encode(task.nb_yaml)}} -b {{macros.flowpytertask.b64_encode(task.mount_yaml)}}"
         self.log.info("Param string")
         self.log.info(param_string)
-        environment[
-            "PYTHONPATH"
-        ] = f"{str(self.CONTAINER_NOTEBOOK_DIR)}:${{PYTHONPATH}}"
+        environment["PYTHONPATH"] = (
+            f"{str(self.CONTAINER_NOTEBOOK_DIR)}:${{PYTHONPATH}}"
+        )
         command = f"papermill {param_string} {self.container_notebook_path} {self.container_notebook_out_path}"
         print(command)
 

@@ -32,7 +32,7 @@
 #       Remove virtual environment and compiled requirements files
 
 VENVDIR ?= .venv
-ACTIVATE := source $(VENVDIR)/bin/activate;
+ACTIVATE := . $(VENVDIR)/bin/activate;
 PIP_COMPILE := pip-compile --strip-extras --generate-hashes --allow-unsafe
 PIP_SYNC := pip-sync --pip-args "--no-deps"
 FLOWPYTER_TASK_BUILD_FILES := setup.py setup.cfg pyproject.toml
@@ -90,6 +90,12 @@ dev-sync: requirements.txt dev-requirements.txt $(FLOWPYTER_TASK_BUILD_FILES) | 
 
 test: dev-sync
 	$(ACTIVATE) pytest tests
+
+black-check: dev-sync
+	$(ACTIVATE) black --check .
+
+black-format: dev-sync
+	$(ACTIVATE) black .
 
 clean:
 	rm -rf "$(VENVDIR)"

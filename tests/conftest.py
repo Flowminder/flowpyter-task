@@ -10,7 +10,6 @@ TEST_STATIC_DIR = Path(__file__).parent / "static"
 TEST_TEMPLATE_DIR = Path(__file__).parent / "template_dir"
 
 
-
 @pytest.fixture
 def tmp_out_dir(tmp_path_factory):
     yield tmp_path_factory.mktemp("out")

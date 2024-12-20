@@ -18,7 +18,7 @@ jobs:
             touch requirements.txt dev-requirements.txt
             make CI=true dev-sync
             docker login -u $DOCKER_CLOUD_USER -p $DOCKER_CLOUD_PASSWORD
-            airflow db migrate
+            . .venv/bin/activate; airflow db migrate
             export AIRFLOW_VAR_FLOWAPI_TOKEN="set_in_host"
             export CONTAINER_TAG=$CIRCLE_SHA1
             export FLOWKIT_VERSION=$(cat .flowkit-version)
@@ -26,6 +26,16 @@ jobs:
             pytest --junitxml=test_out.xml .
       - store_test_results:
           path: tests/test_out.xml
+  lint:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Lint with black
+          command: |
+            touch requirements.txt dev-requirements.txt
+            make CI=true black-check
   test_pypi_publish:
     docker:
       - image: cimg/python:3.10
@@ -135,6 +145,7 @@ jobs:
 workflows:
   test_publish:
     jobs:
+      - lint
       - test:
           context: org-global
           filters:
@@ -159,6 +170,7 @@ workflows:
             - build_docs
             - test
             - build_docker_image
+            - lint
       - test_pypi_publish:
           requires:
             - test
@@ -170,6 +182,7 @@ workflows:
       - pypi_publish:
           requires:
             - test
+            - lint
           context: org-global
           filters:
             branches:
@@ -186,6 +199,7 @@ workflows:
           name: retag_master_branch
           requires: &retag_requirements
             - test
+            - lint
             - build_docker_image
           context: org-global
           filters:
