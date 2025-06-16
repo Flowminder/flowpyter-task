@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped FlowKit to 1.33.1
+
 ## [1.3.3]
 
 ### Changed
