@@ -33,7 +33,7 @@
 
 VENVDIR ?= .venv
 ACTIVATE := . $(VENVDIR)/bin/activate;
-PIP_COMPILE := pip-compile --strip-extras --generate-hashes --allow-unsafe
+PIP_COMPILE := uv pip compile --strip-extras --generate-hashes --allow-unsafe --universal
 PIP_SYNC := pip-sync --pip-args "--no-deps"
 FLOWPYTER_TASK_BUILD_FILES := setup.py setup.cfg pyproject.toml
 # File to keep track of when virtual env was created (not modified when new packages are installed),
