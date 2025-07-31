@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Bumped FlowKit to 1.33.1
+- Busybox docker now comes from `docker.from_env()` to support both d-in-d and port binding
 
 ## [1.3.3]
 
