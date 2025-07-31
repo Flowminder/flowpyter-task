@@ -297,7 +297,7 @@ class PapermillOperator(DockerOperator):
             )
             (host_root / relative_path).mkdir(exist_ok=True, parents=True)
         else:
-            client = docker.DockerClient()
+            client = docker.from_env()
             self.log.info(
                 f"Spawning busybox container to create {relative_path} in {host_root}"
                 f" using uid {self.notebook_uid} gid {self.notebook_gid}"
