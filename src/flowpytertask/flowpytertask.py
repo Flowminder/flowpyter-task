@@ -199,37 +199,42 @@ class PapermillOperator(DockerOperator):
                 f"'dagrun_data_dir' and 'shared_data_dir"
             )
 
+    @staticmethod
+    def _str_to_mount(source: str, target: str, read_only: bool = False):
+        if source.startswith("volume:"):
+            source = source.replace("volume:", "", 1)
+            mount_type = "volume"
+        else:
+            mount_type = "bind"
+        return Mount(source=source, target=target, type=mount_type, read_only=read_only)
+
     def _setup_mounts(self):
         mount_params = {}
         self.mounts = [
-            Mount(
+            self._str_to_mount(
                 source=str(self.host_notebook_dir),
                 target=str(self.CONTAINER_NOTEBOOK_DIR),
-                type="bind",
                 read_only=True,
             ),
-            Mount(
+            self._str_to_mount(
                 source=str(self.host_notebook_out_dir),
                 target=str(self.CONTAINER_NOTEBOOK_OUT_DIR),
-                type="bind",
             ),
         ]
         if self.host_dagrun_data_dir:
             self.mounts.append(
-                Mount(
+                self._str_to_mount(
                     source=str(self.host_dagrun_data_dir),
                     target=str(self.CONTAINER_DAGRUN_DATA_DIR),
-                    type="bind",
                 )
             )
             mount_params["dagrun_data_dir"] = str(self.CONTAINER_DAGRUN_DATA_DIR)
 
         if self.host_shared_data_dir:
             self.mounts.append(
-                Mount(
+                self._str_to_mount(
                     source=str(self.host_shared_data_dir),
                     target=str(self.CONTAINER_SHARED_DATA_DIR),
-                    type="bind",
                 )
             )
             mount_params["shared_data_dir"] = str(self.CONTAINER_SHARED_DATA_DIR)
@@ -243,14 +248,15 @@ class PapermillOperator(DockerOperator):
                 )
             container_path = f"/opt/airflow/{name}"
             self.mounts.append(
-                Mount(
-                    source=host_path, target=container_path, type="bind", read_only=True
+                self._str_to_mount(
+                    source=host_path,
+                    target=container_path,
                 )
             )
             mount_params[name] = container_path
 
         mount_string = "\n".join(f"{m['Source']} to {m['Target']}" for m in self.mounts)
-        self.log.info(f"Mounts:\n {mount_string}")
+        self.log.info(f"self._str_to_mounts:\n {mount_string}")
         return mount_params
 
     def _setup_notebook_paths(

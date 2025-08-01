@@ -37,6 +37,15 @@ def default_folder_params(tmp_out_dir, tmp_dagrun_data_dir, tmp_shared_data_dir)
         "host_shared_data_dir": str(tmp_shared_data_dir),
     }
 
+@pytest.fixture()
+def volume_mount_folder_params():
+    yield {
+        "host_notebook_dir":"volume:host_notebook_dir",
+        "host_dagrun_data_dir":"volume:host_dagrun_data_dir",
+        "host_notebook_out_dir":"volume:host_notebook_out_dir",
+        "host_shared_data_dir":"volume:host_shared_data_dir",
+    }
+
 
 @pytest.fixture
 def base_dag(dag_setup, default_folder_params):

@@ -29,5 +29,8 @@ with DAG(
         nb_params={"artifact_in": "my_artifact.txt"},
         task_id="read_task",
     )
+    volume_mount_task = FlowpyterOperator(
+        notebook_name="test_nb.ipynb", task_id="test_task"
+    )
     first_task
     glue_task >> read_task
