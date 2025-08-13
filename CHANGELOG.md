@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Bumped FlowKit to 1.33.1
 - Busybox docker now comes from `docker.from_env()` to support both d-in-d and port binding
 
+## Added
+
+- Added a new `start_as_root` option to `PapermillOperator` which starts the lab container with uid 0, and relies on the container to switch to the correct user. This resolves issues with permissions on the in container home directory in some cases when running as a specific user.
+
 ## [1.3.3]
 
 ### Changed

@@ -76,6 +76,9 @@ class PapermillOperator(DockerOperator):
         parameter in https://airflow.apache.org/docs/apache-airflow-providers-docker/stable/_api/airflow/providers/docker/operators/docker/index.html
     environment : dict, optional
         Environment variables to be injected into the running Docker environment.
+    start_as_root : bool, default False
+        If True, the notebook will start as uid:gid 0:0 but run as the supplied uid/gid. In some instances
+        this can resolve permissions issues on the in container home directory.
 
     Notes
     -----
@@ -126,6 +129,7 @@ class PapermillOperator(DockerOperator):
         nb_params: dict | str | None = None,
         image=None,
         environment=None,
+        start_as_root=False,
         **kwargs,
     ):
         if Path(notebook_name).suffix not in [".json", ".ipynb"]:
@@ -164,12 +168,15 @@ class PapermillOperator(DockerOperator):
         environment["PYTHONPATH"] = (
             f"{str(self.CONTAINER_NOTEBOOK_DIR)}:${{PYTHONPATH}}"
         )
+        if start_as_root:
+            environment["NB_UID"] = self.notebook_uid
+            environment["NB_GID"] = self.notebook_gid
         command = f"papermill {param_string} {self.container_notebook_path} {self.container_notebook_out_path}"
         print(command)
 
         super().__init__(
             command=command,
-            user=self._user_string,
+            user="0:0" if start_as_root else self._user_string,
             auto_remove="force",
             image=image,
             mounts=self.mounts,
