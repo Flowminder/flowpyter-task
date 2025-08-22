@@ -7,7 +7,7 @@ from collections import UserDict
 from keyword import iskeyword
 from pathlib import Path
 from typing import Union, Optional
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 import yaml
 from airflow.models import Variable
@@ -58,23 +58,29 @@ class MountSpec:
     read_only: bool = True
     volume: bool = False
     container_path: Optional[str] = None
-    docker_mount: Mount = field(init=False)
 
-    def __post_init__(self) -> None:
-        self.container_path = (
+    @property
+    def effective_container_path(self) -> str:
+        return (
             f"/opt/airflow/{self.path_variable}"
             if self.container_path is None
             else self.container_path
         )
-        self.docker_mount = Mount(
+
+    @property
+    def docker_mount(self) -> Mount:
+        return Mount(
             source=self.host_path,
-            target=self.container_path,
+            target=self.effective_container_path,
             type="volume" if self.volume else "bind",
             read_only=self.read_only,
         )
 
     def __eq__(self, other) -> bool:
         return self.path_variable == other.path_variable
+
+    def __hash__(self) -> int:
+        return hash(self.path_variable)
 
 
 class PapermillOperator(DockerOperator):
@@ -159,7 +165,7 @@ class PapermillOperator(DockerOperator):
         image=None,
         environment=None,
         start_as_root=False,
-        mounts: list[MountSpec] = None,
+        mounts: list[MountSpec] | None = None,
         **kwargs,
     ):
         if Path(notebook_name).suffix not in [".json", ".ipynb"]:
@@ -293,7 +299,7 @@ class PapermillOperator(DockerOperator):
             else:
                 seen.add(spec)
 
-        if len(dupes) > 1:
+        if len(dupes) > 0:
             if "dagrun_data_dir" in dupes or "shared_data_dir" in dupes:
                 raise ReservedParameterError(
                     "Read-only mounts cannot include 'dagrun_data_dir' or "
@@ -305,7 +311,7 @@ class PapermillOperator(DockerOperator):
 
         for mount_spec in mounts:
             self.mounts.append(mount_spec.docker_mount)
-            mount_params[mount_spec.path_variable] = mount_spec.container_path
+            mount_params[mount_spec.path_variable] = mount_spec.effective_container_path
 
         mount_string = "\n".join(f"{m['Source']} to {m['Target']}" for m in self.mounts)
         self.log.info(f"Mounts:\n {mount_string}")
