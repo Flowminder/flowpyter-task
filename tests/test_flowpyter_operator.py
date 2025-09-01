@@ -529,3 +529,21 @@ def test_make_dir_with_docker(monkeypatch, tmp_path, base_dag):
     foo.notebook_gid = os.getgid()
     foo.create_path_on_host(tmp_path, "new_file")
     assert (tmp_path / "new_file").exists()
+
+
+def test_run_as_root():
+    """When starting as root, we should get uid/gid 0 and push the provided
+    notebook user and group to environment variables."""
+    from flowpytertask import PapermillOperator
+
+    op = PapermillOperator(
+        notebook_name="_.ipynb",
+        host_notebook_dir="_",
+        host_notebook_out_dir="_",
+        host_dagrun_data_dir="_",
+        task_id="_",
+        start_as_root=True,
+    )
+    assert op.user == "0:0"
+    assert op.environment["NB_UID"] == op.notebook_uid
+    assert op.environment["NB_GID"] == op.notebook_gid
