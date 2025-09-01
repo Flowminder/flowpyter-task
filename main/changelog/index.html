@@ -477,6 +477,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#133" class="md-nav__link">
     <span class="md-ellipsis">
       1.3.3
@@ -616,7 +625,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -640,7 +649,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_1" class="md-nav__link">
+  <a href="#added_2" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -673,7 +682,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_2" class="md-nav__link">
+  <a href="#added_3" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -706,7 +715,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_3" class="md-nav__link">
+  <a href="#added_4" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -796,6 +805,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#133" class="md-nav__link">
     <span class="md-ellipsis">
       1.3.3
@@ -935,7 +953,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -959,7 +977,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_1" class="md-nav__link">
+  <a href="#added_2" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -992,7 +1010,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_2" class="md-nav__link">
+  <a href="#added_3" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -1025,7 +1043,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added_3" class="md-nav__link">
+  <a href="#added_4" class="md-nav__link">
     <span class="md-ellipsis">
       Added
     </span>
@@ -1080,6 +1098,10 @@
 <li>Bumped FlowKit to 1.33.1</li>
 <li>Busybox docker now comes from <code>docker.from_env()</code> to support both d-in-d and port binding</li>
 </ul>
+<h2 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added a new <code>start_as_root</code> option to <code>PapermillOperator</code> which starts the lab container with uid 0, and relies on the container to switch to the correct user. This resolves issues with permissions on the in container home directory in some cases when running as a specific user.</li>
+</ul>
 <h2 id="133"><a href="https://github.com/Flowminder/flowpyter-task/compare/1.3.0...1.3.3">1.3.3</a><a class="headerlink" href="#133" title="Permanent link">&para;</a></h2>
 <h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1112,12 +1134,12 @@
 <li>Fixed rendering of readme on pypi.org</li>
 </ul>
 <h2 id="113">1.1.3<a class="headerlink" href="#113" title="Permanent link">&para;</a></h2>
-<h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h3>
+<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>nb_params</code> can now take a yaml string, json filepath or yaml filepath in addition to dictionaries</li>
 </ul>
 <h2 id="110">1.1.0<a class="headerlink" href="#110" title="Permanent link">&para;</a></h2>
-<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">&para;</a></h3>
+<h3 id="added_2">Added<a class="headerlink" href="#added_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>FlowpyterOperator</code>; <code>shared_data_dir</code> mount to share data between dagruns</li>
 </ul>
@@ -1126,7 +1148,7 @@
 <li><code>FlowpyterOperator</code>; <code>data_dir</code> is now <code>dag_data_dir</code></li>
 </ul>
 <h2 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h2>
-<h3 id="added_2">Added<a class="headerlink" href="#added_2" title="Permanent link">&para;</a></h3>
+<h3 id="added_3">Added<a class="headerlink" href="#added_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>FlowpyterOperator</code> now has flags for injecting connection environemnts into notebooks</li>
 <li><code>template</code> and <code>static</code> mounts have been replaced with a generic <code>read_only_mounts</code> arg</li>
@@ -1136,7 +1158,7 @@
 <li><code>flowpyter-task</code> has been replaced with <code>FlowpyterOperator</code> - see the docstring for <code>src.flowpytertask.FlowpyterOperator</code> for full details</li>
 </ul>
 <h2 id="017">0.1.7<a class="headerlink" href="#017" title="Permanent link">&para;</a></h2>
-<h3 id="added_3">Added<a class="headerlink" href="#added_3" title="Permanent link">&para;</a></h3>
+<h3 id="added_4">Added<a class="headerlink" href="#added_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Changelog</li>
 </ul>
