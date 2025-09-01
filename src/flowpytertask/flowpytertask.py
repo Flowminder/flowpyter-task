@@ -6,7 +6,8 @@ from __future__ import annotations
 from collections import UserDict
 from keyword import iskeyword
 from pathlib import Path
-from typing import Union
+from typing import Union, Optional
+from dataclasses import dataclass
 
 import yaml
 from airflow.models import Variable
@@ -50,6 +51,38 @@ def is_running_on_docker() -> bool:
     return Path("/.dockerenv").exists()
 
 
+@dataclass(frozen=True)
+class MountSpec:
+    path_variable: str
+    host_path: str
+    read_only: bool = True
+    volume: bool = False
+    container_path: Optional[str] = None
+
+    @property
+    def effective_container_path(self) -> str:
+        return (
+            f"/opt/airflow/{self.path_variable}"
+            if self.container_path is None
+            else self.container_path
+        )
+
+    @property
+    def docker_mount(self) -> Mount:
+        return Mount(
+            source=self.host_path,
+            target=self.effective_container_path,
+            type="volume" if self.volume else "bind",
+            read_only=self.read_only,
+        )
+
+    def __eq__(self, other) -> bool:
+        return self.path_variable == other.path_variable
+
+    def __hash__(self) -> int:
+        return hash(self.path_variable)
+
+
 class PapermillOperator(DockerOperator):
     """
     An operator that runs a parameterised notebook in a specified container.
@@ -79,6 +112,8 @@ class PapermillOperator(DockerOperator):
     start_as_root : bool, default False
         If True, the notebook will start as uid:gid 0:0 but run as the supplied uid/gid. In some instances
         this can resolve permissions issues on the in container home directory.
+    mounts : list[MountSpec], optional
+        A list of mount spec objects to attach as mounts for the container. May be used instead of `read_only_mounts`.
 
     Notes
     -----
@@ -130,6 +165,7 @@ class PapermillOperator(DockerOperator):
         image=None,
         environment=None,
         start_as_root=False,
+        mounts: list[MountSpec] | None = None,
         **kwargs,
     ):
         if Path(notebook_name).suffix not in [".json", ".ipynb"]:
@@ -140,22 +176,35 @@ class PapermillOperator(DockerOperator):
             environment = {}
         if read_only_mounts is None:
             read_only_mounts = {}
+        if mounts is None:
+            mounts = []
+
+        self.mounts = []
         self.nb_params = nb_params
         self.log.info(f"Creating docker task to run for {notebook_name}")
         self.notebook_uid = Variable.get("NOTEBOOK_UID")
         self.notebook_gid = Variable.get("NOTEBOOK_GID")
         self._user_string = f"{self.notebook_uid}:{self.notebook_gid}"
         self.notebook_name = notebook_name
-        self.read_only_mounts = read_only_mounts
+        mounts = [
+            *mounts,
+            *(MountSpec(var, pth) for var, pth in read_only_mounts.items()),
+        ]
+        if len(set(mounts)) < len(mounts):
+            raise ValueError(
+                "Duplicate variable names for mounts. Each mount must have a unique variable name."
+            )
 
         self._setup_notebook_paths(
-            host_notebook_dir, host_notebook_out_dir, notebook_name
+            host_notebook_dir,
+            host_notebook_out_dir,
+            notebook_name,
         )
         if host_dagrun_data_dir:
             self._setup_dagrun_data_dir(host_dagrun_data_dir)
         self.host_shared_data_dir = host_shared_data_dir
 
-        self.mount_yaml = yaml.safe_dump(self._setup_mounts())
+        self.mount_yaml = yaml.safe_dump(self._setup_mounts(mounts))
         self.nb_yaml = (
             self.nb_params
             if isinstance(self.nb_params, str)
@@ -206,55 +255,64 @@ class PapermillOperator(DockerOperator):
                 f"'dagrun_data_dir' and 'shared_data_dir"
             )
 
-    def _setup_mounts(self):
+    def _setup_mounts(self, mounts) -> dict[str, str]:
         mount_params = {}
-        self.mounts = [
-            Mount(
-                source=str(self.host_notebook_dir),
-                target=str(self.CONTAINER_NOTEBOOK_DIR),
-                type="bind",
-                read_only=True,
+        mounts = [
+            *mounts,
+            MountSpec(
+                path_variable="notebook_dir",
+                host_path=str(self.host_notebook_dir),
+                container_path=str(self.CONTAINER_NOTEBOOK_DIR),
             ),
-            Mount(
-                source=str(self.host_notebook_out_dir),
-                target=str(self.CONTAINER_NOTEBOOK_OUT_DIR),
-                type="bind",
+            MountSpec(
+                path_variable="notebook_out_dir",
+                host_path=str(self.host_notebook_out_dir),
+                container_path=str(self.CONTAINER_NOTEBOOK_OUT_DIR),
+                read_only=False,
             ),
         ]
         if self.host_dagrun_data_dir:
-            self.mounts.append(
-                Mount(
-                    source=str(self.host_dagrun_data_dir),
-                    target=str(self.CONTAINER_DAGRUN_DATA_DIR),
-                    type="bind",
+            mounts.append(
+                MountSpec(
+                    path_variable="dagrun_data_dir",
+                    host_path=str(self.host_dagrun_data_dir),
+                    container_path=str(self.CONTAINER_DAGRUN_DATA_DIR),
+                    read_only=False,
                 )
             )
-            mount_params["dagrun_data_dir"] = str(self.CONTAINER_DAGRUN_DATA_DIR)
 
         if self.host_shared_data_dir:
-            self.mounts.append(
-                Mount(
-                    source=str(self.host_shared_data_dir),
-                    target=str(self.CONTAINER_SHARED_DATA_DIR),
-                    type="bind",
+            mounts.append(
+                MountSpec(
+                    path_variable="shared_data_dir",
+                    host_path=str(self.host_shared_data_dir),
+                    container_path=str(self.CONTAINER_SHARED_DATA_DIR),
+                    read_only=False,
                 )
             )
-            mount_params["shared_data_dir"] = str(self.CONTAINER_SHARED_DATA_DIR)
 
-        for name, host_path in self.read_only_mounts.items():
-            if name in ["dagrun_data_dir", "shared_data_dir"]:
+        seen = set()
+        dupes = set()
+
+        for spec in mounts:
+            if spec in seen:
+                dupes.add(spec)
+            else:
+                seen.add(spec)
+
+        if len(dupes) > 0:
+            if "dagrun_data_dir" in dupes or "shared_data_dir" in dupes:
                 raise ReservedParameterError(
                     "Read-only mounts cannot include 'dagrun_data_dir' or "
                     "'shared_data_dir'; these should be set by their respective"
                     " parameters"
                 )
-            container_path = f"/opt/airflow/{name}"
-            self.mounts.append(
-                Mount(
-                    source=host_path, target=container_path, type="bind", read_only=True
-                )
-            )
-            mount_params[name] = container_path
+            else:
+                raise ValueError(f"Duplicate mounts: {dupes}")
+
+        for mount_spec in mounts:
+            self.mounts.append(mount_spec.docker_mount)
+            mount_params[mount_spec.path_variable] = mount_spec.effective_container_path
 
         mount_string = "\n".join(f"{m['Source']} to {m['Target']}" for m in self.mounts)
         self.log.info(f"Mounts:\n {mount_string}")

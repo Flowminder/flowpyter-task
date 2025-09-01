@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## Added
 
 - Added a new `start_as_root` option to `PapermillOperator` which starts the lab container with uid 0, and relies on the container to switch to the correct user. This resolves issues with permissions on the in container home directory in some cases when running as a specific user.
+- `PapermillOperator` now accepts a `mounts` argument, which should be a list of `MountSpec` objects which may be read only or read write, and may optionally be a docker volume rather than a bind mount. This argument may be used instead of `read_only_mounts`. Mounts must have a unique name.
+
 
 ## [1.3.3]
 
