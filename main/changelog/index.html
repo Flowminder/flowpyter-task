@@ -1101,6 +1101,7 @@
 <h2 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Added a new <code>start_as_root</code> option to <code>PapermillOperator</code> which starts the lab container with uid 0, and relies on the container to switch to the correct user. This resolves issues with permissions on the in container home directory in some cases when running as a specific user.</li>
+<li><code>PapermillOperator</code> now accepts a <code>mounts</code> argument, which should be a list of <code>MountSpec</code> objects which may be read only or read write, and may optionally be a docker volume rather than a bind mount. This argument may be used instead of <code>read_only_mounts</code>. Mounts must have a unique name.</li>
 </ul>
 <h2 id="133"><a href="https://github.com/Flowminder/flowpyter-task/compare/1.3.0...1.3.3">1.3.3</a><a class="headerlink" href="#133" title="Permanent link">&para;</a></h2>
 <h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">&para;</a></h3>

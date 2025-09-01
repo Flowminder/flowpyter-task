@@ -872,65 +872,7 @@ in one notebook, and read and print its contents in the other:</p>
 
               <details class="quote">
                 <summary>Source code in <code>flowpytertask/flowpytertask.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">342</span>
-<span class="normal">343</span>
-<span class="normal">344</span>
-<span class="normal">345</span>
-<span class="normal">346</span>
-<span class="normal">347</span>
-<span class="normal">348</span>
-<span class="normal">349</span>
-<span class="normal">350</span>
-<span class="normal">351</span>
-<span class="normal">352</span>
-<span class="normal">353</span>
-<span class="normal">354</span>
-<span class="normal">355</span>
-<span class="normal">356</span>
-<span class="normal">357</span>
-<span class="normal">358</span>
-<span class="normal">359</span>
-<span class="normal">360</span>
-<span class="normal">361</span>
-<span class="normal">362</span>
-<span class="normal">363</span>
-<span class="normal">364</span>
-<span class="normal">365</span>
-<span class="normal">366</span>
-<span class="normal">367</span>
-<span class="normal">368</span>
-<span class="normal">369</span>
-<span class="normal">370</span>
-<span class="normal">371</span>
-<span class="normal">372</span>
-<span class="normal">373</span>
-<span class="normal">374</span>
-<span class="normal">375</span>
-<span class="normal">376</span>
-<span class="normal">377</span>
-<span class="normal">378</span>
-<span class="normal">379</span>
-<span class="normal">380</span>
-<span class="normal">381</span>
-<span class="normal">382</span>
-<span class="normal">383</span>
-<span class="normal">384</span>
-<span class="normal">385</span>
-<span class="normal">386</span>
-<span class="normal">387</span>
-<span class="normal">388</span>
-<span class="normal">389</span>
-<span class="normal">390</span>
-<span class="normal">391</span>
-<span class="normal">392</span>
-<span class="normal">393</span>
-<span class="normal">394</span>
-<span class="normal">395</span>
-<span class="normal">396</span>
-<span class="normal">397</span>
-<span class="normal">398</span>
-<span class="normal">399</span>
-<span class="normal">400</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">400</span>
 <span class="normal">401</span>
 <span class="normal">402</span>
 <span class="normal">403</span>
@@ -999,7 +941,65 @@ in one notebook, and read and print its contents in the other:</p>
 <span class="normal">466</span>
 <span class="normal">467</span>
 <span class="normal">468</span>
-<span class="normal">469</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">FlowpyterOperator</span><span class="p">(</span><span class="n">PapermillOperator</span><span class="p">):</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">FlowpyterOperator</span><span class="p">(</span><span class="n">PapermillOperator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An operator that runs a parameterised Flowpyter notebook with a shared data area</span>
 
@@ -1343,6 +1343,22 @@ this can resolve permissions issues on the in container home directory.</p>
                   <code>False</code>
             </td>
           </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>mounts</code>
+            </td>
+            <td>
+                  <code>list[<span title="flowpytertask.flowpytertask.MountSpec">MountSpec</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of mount spec objects to attach as mounts for the container. May be used instead of <code>read_only_mounts</code>.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
       </tbody>
     </table>
 
@@ -1359,40 +1375,7 @@ this can resolve permissions issues on the in container home directory.</p>
 
               <details class="quote">
                 <summary>Source code in <code>flowpytertask/flowpytertask.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 53</span>
-<span class="normal"> 54</span>
-<span class="normal"> 55</span>
-<span class="normal"> 56</span>
-<span class="normal"> 57</span>
-<span class="normal"> 58</span>
-<span class="normal"> 59</span>
-<span class="normal"> 60</span>
-<span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 86</span>
 <span class="normal"> 87</span>
 <span class="normal"> 88</span>
 <span class="normal"> 89</span>
@@ -1645,7 +1628,65 @@ this can resolve permissions issues on the in container home directory.</p>
 <span class="normal">336</span>
 <span class="normal">337</span>
 <span class="normal">338</span>
-<span class="normal">339</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PapermillOperator</span><span class="p">(</span><span class="n">DockerOperator</span><span class="p">):</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PapermillOperator</span><span class="p">(</span><span class="n">DockerOperator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An operator that runs a parameterised notebook in a specified container.</span>
 
@@ -1674,6 +1715,8 @@ this can resolve permissions issues on the in container home directory.</p>
 <span class="sd">    start_as_root : bool, default False</span>
 <span class="sd">        If True, the notebook will start as uid:gid 0:0 but run as the supplied uid/gid. In some instances</span>
 <span class="sd">        this can resolve permissions issues on the in container home directory.</span>
+<span class="sd">    mounts : list[MountSpec], optional</span>
+<span class="sd">        A list of mount spec objects to attach as mounts for the container. May be used instead of `read_only_mounts`.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -1725,6 +1768,7 @@ this can resolve permissions issues on the in container home directory.</p>
         <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">environment</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">start_as_root</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">mounts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">MountSpec</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="k">if</span> <span class="n">Path</span><span class="p">(</span><span class="n">notebook_name</span><span class="p">)</span><span class="o">.</span><span class="n">suffix</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;.json&quot;</span><span class="p">,</span> <span class="s2">&quot;.ipynb&quot;</span><span class="p">]:</span>
@@ -1735,22 +1779,35 @@ this can resolve permissions issues on the in container home directory.</p>
             <span class="n">environment</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">if</span> <span class="n">read_only_mounts</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">read_only_mounts</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">mounts</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mounts</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nb_params</span> <span class="o">=</span> <span class="n">nb_params</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Creating docker task to run for </span><span class="si">{</span><span class="n">notebook_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">notebook_uid</span> <span class="o">=</span> <span class="n">Variable</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;NOTEBOOK_UID&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">notebook_gid</span> <span class="o">=</span> <span class="n">Variable</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;NOTEBOOK_GID&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_user_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">notebook_uid</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">notebook_gid</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">notebook_name</span> <span class="o">=</span> <span class="n">notebook_name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">read_only_mounts</span> <span class="o">=</span> <span class="n">read_only_mounts</span>
+        <span class="n">mounts</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="o">*</span><span class="n">mounts</span><span class="p">,</span>
+            <span class="o">*</span><span class="p">(</span><span class="n">MountSpec</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">pth</span><span class="p">)</span> <span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">pth</span> <span class="ow">in</span> <span class="n">read_only_mounts</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">mounts</span><span class="p">))</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">mounts</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Duplicate variable names for mounts. Each mount must have a unique variable name.&quot;</span>
+            <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_setup_notebook_paths</span><span class="p">(</span>
-            <span class="n">host_notebook_dir</span><span class="p">,</span> <span class="n">host_notebook_out_dir</span><span class="p">,</span> <span class="n">notebook_name</span>
+            <span class="n">host_notebook_dir</span><span class="p">,</span>
+            <span class="n">host_notebook_out_dir</span><span class="p">,</span>
+            <span class="n">notebook_name</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">if</span> <span class="n">host_dagrun_data_dir</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_setup_dagrun_data_dir</span><span class="p">(</span><span class="n">host_dagrun_data_dir</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">host_shared_data_dir</span> <span class="o">=</span> <span class="n">host_shared_data_dir</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">mount_yaml</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_setup_mounts</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mount_yaml</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_setup_mounts</span><span class="p">(</span><span class="n">mounts</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nb_yaml</span> <span class="o">=</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">nb_params</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nb_params</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
@@ -1801,55 +1858,64 @@ this can resolve permissions issues on the in container home directory.</p>
                 <span class="sa">f</span><span class="s2">&quot;&#39;dagrun_data_dir&#39; and &#39;shared_data_dir&quot;</span>
             <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_setup_mounts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_setup_mounts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mounts</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
         <span class="n">mount_params</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="n">Mount</span><span class="p">(</span>
-                <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_notebook_dir</span><span class="p">),</span>
-                <span class="n">target</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_NOTEBOOK_DIR</span><span class="p">),</span>
-                <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bind&quot;</span><span class="p">,</span>
-                <span class="n">read_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">mounts</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="o">*</span><span class="n">mounts</span><span class="p">,</span>
+            <span class="n">MountSpec</span><span class="p">(</span>
+                <span class="n">path_variable</span><span class="o">=</span><span class="s2">&quot;notebook_dir&quot;</span><span class="p">,</span>
+                <span class="n">host_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_notebook_dir</span><span class="p">),</span>
+                <span class="n">container_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_NOTEBOOK_DIR</span><span class="p">),</span>
             <span class="p">),</span>
-            <span class="n">Mount</span><span class="p">(</span>
-                <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_notebook_out_dir</span><span class="p">),</span>
-                <span class="n">target</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_NOTEBOOK_OUT_DIR</span><span class="p">),</span>
-                <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bind&quot;</span><span class="p">,</span>
+            <span class="n">MountSpec</span><span class="p">(</span>
+                <span class="n">path_variable</span><span class="o">=</span><span class="s2">&quot;notebook_out_dir&quot;</span><span class="p">,</span>
+                <span class="n">host_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_notebook_out_dir</span><span class="p">),</span>
+                <span class="n">container_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_NOTEBOOK_OUT_DIR</span><span class="p">),</span>
+                <span class="n">read_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
             <span class="p">),</span>
         <span class="p">]</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">host_dagrun_data_dir</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="n">Mount</span><span class="p">(</span>
-                    <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_dagrun_data_dir</span><span class="p">),</span>
-                    <span class="n">target</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_DAGRUN_DATA_DIR</span><span class="p">),</span>
-                    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bind&quot;</span><span class="p">,</span>
+            <span class="n">mounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">MountSpec</span><span class="p">(</span>
+                    <span class="n">path_variable</span><span class="o">=</span><span class="s2">&quot;dagrun_data_dir&quot;</span><span class="p">,</span>
+                    <span class="n">host_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_dagrun_data_dir</span><span class="p">),</span>
+                    <span class="n">container_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_DAGRUN_DATA_DIR</span><span class="p">),</span>
+                    <span class="n">read_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="p">)</span>
-            <span class="n">mount_params</span><span class="p">[</span><span class="s2">&quot;dagrun_data_dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_DAGRUN_DATA_DIR</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">host_shared_data_dir</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="n">Mount</span><span class="p">(</span>
-                    <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_shared_data_dir</span><span class="p">),</span>
-                    <span class="n">target</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_SHARED_DATA_DIR</span><span class="p">),</span>
-                    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bind&quot;</span><span class="p">,</span>
+            <span class="n">mounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">MountSpec</span><span class="p">(</span>
+                    <span class="n">path_variable</span><span class="o">=</span><span class="s2">&quot;shared_data_dir&quot;</span><span class="p">,</span>
+                    <span class="n">host_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host_shared_data_dir</span><span class="p">),</span>
+                    <span class="n">container_path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_SHARED_DATA_DIR</span><span class="p">),</span>
+                    <span class="n">read_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                 <span class="p">)</span>
             <span class="p">)</span>
-            <span class="n">mount_params</span><span class="p">[</span><span class="s2">&quot;shared_data_dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_SHARED_DATA_DIR</span><span class="p">)</span>
 
-        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">host_path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_only_mounts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;dagrun_data_dir&quot;</span><span class="p">,</span> <span class="s2">&quot;shared_data_dir&quot;</span><span class="p">]:</span>
+        <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">dupes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">spec</span> <span class="ow">in</span> <span class="n">mounts</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">spec</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+                <span class="n">dupes</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">dupes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;dagrun_data_dir&quot;</span> <span class="ow">in</span> <span class="n">dupes</span> <span class="ow">or</span> <span class="s2">&quot;shared_data_dir&quot;</span> <span class="ow">in</span> <span class="n">dupes</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">ReservedParameterError</span><span class="p">(</span>
                     <span class="s2">&quot;Read-only mounts cannot include &#39;dagrun_data_dir&#39; or &quot;</span>
                     <span class="s2">&quot;&#39;shared_data_dir&#39;; these should be set by their respective&quot;</span>
                     <span class="s2">&quot; parameters&quot;</span>
                 <span class="p">)</span>
-            <span class="n">container_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/opt/airflow/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                <span class="n">Mount</span><span class="p">(</span>
-                    <span class="n">source</span><span class="o">=</span><span class="n">host_path</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">container_path</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bind&quot;</span><span class="p">,</span> <span class="n">read_only</span><span class="o">=</span><span class="kc">True</span>
-                <span class="p">)</span>
-            <span class="p">)</span>
-            <span class="n">mount_params</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">container_path</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Duplicate mounts: </span><span class="si">{</span><span class="n">dupes</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">mount_spec</span> <span class="ow">in</span> <span class="n">mounts</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mount_spec</span><span class="o">.</span><span class="n">docker_mount</span><span class="p">)</span>
+            <span class="n">mount_params</span><span class="p">[</span><span class="n">mount_spec</span><span class="o">.</span><span class="n">path_variable</span><span class="p">]</span> <span class="o">=</span> <span class="n">mount_spec</span><span class="o">.</span><span class="n">effective_container_path</span>
 
         <span class="n">mount_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;Source&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mounts:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">mount_string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1971,9 +2037,9 @@ this can resolve permissions issues on the in container home directory.</p>
 
             <details class="quote">
               <summary>Source code in <code>flowpytertask/flowpytertask.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_running_on_docker</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">is_running_on_docker</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Checks for &quot;/.dockerenv as a test&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;/.dockerenv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
