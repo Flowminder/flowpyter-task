@@ -179,6 +179,7 @@ class PapermillOperator(DockerOperator):
         if mounts is None:
             mounts = []
 
+        self.mounts = []
         self.nb_params = nb_params
         self.log.info(f"Creating docker task to run for {notebook_name}")
         self.notebook_uid = Variable.get("NOTEBOOK_UID")
