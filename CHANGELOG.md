@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.4.0]
+
 ### Changed
 
 - Bumped FlowKit to 1.33.1
@@ -85,6 +87,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Initial release
 
-[Unreleased]: https://github.com/Flowminder/flowpyter-task/compare/1.3.3...main
+[Unreleased]: https://github.com/Flowminder/flowpyter-task/compare/1.4.0...main
+[1.4.0]: https://github.com/Flowminder/flowpyter-task/compare/1.3.3...1.4.0
 [1.3.3]: https://github.com/Flowminder/flowpyter-task/compare/1.3.0...1.3.3
 [1.3.0]: https://github.com/Flowminder/flowpyter-task/tree/1.3.0
