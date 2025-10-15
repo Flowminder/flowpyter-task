@@ -4,7 +4,7 @@ aiohappyeyeballs==2.4.4 \
     --hash=sha256:5fdd7d87889c63183afc18ce9271f9b0a7d32c2303e394468dd45d514a757745 \
     --hash=sha256:a980909d50efcd44795c4afeca523296716d50cd756ddca6af8c65b996e27de8
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
 aiohttp==3.11.11 \
     --hash=sha256:0882c2820fd0132240edbb4a51eb8ceb6eef8181db9ad5291ab3332e0d71df5f \
@@ -84,37 +84,37 @@ aiohttp==3.11.11 \
     --hash=sha256:ffa336210cf9cd8ed117011085817d00abe4c08f99968deef0013ea283547204 \
     --hash=sha256:ffb3dc385f6bb1568aa974fe65da84723210e5d9707e360e9ecb51f59406cd2e
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-http
 aiosignal==1.3.2 \
     --hash=sha256:45cde58e409a301715980c2b01d0c28bdde3770d8290b5eb2173759d9acb31a5 \
     --hash=sha256:a8c255c66fafb1e499c9351d0bf32ff2d8a0321595ebac3b93713656d2436f54
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
 aiosqlite==0.20.0 \
     --hash=sha256:36a1deaca0cac40ebe32aac9977a6e2bbc7f5189f23f4a54d5908986729e5bd6 \
     --hash=sha256:6d35c8c256637f4672f843c31021464090805bf925385ac39473fb16eaaca3d7
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-sqlite
 alembic==1.14.1 \
     --hash=sha256:1acdd7a3a478e208b0503cd73614d5e4c6efafa4e73518bb60e4f2846a37b1c5 \
     --hash=sha256:496e888245a53adf1498fcab31713a469c65836f8de76e01399aa1c3e90dd213
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 anyio==4.8.0 \
     --hash=sha256:1d9fe889df5212298c0c0723fa20479d1b94883a2df44bd3897aa91083316f7a \
     --hash=sha256:b5011f270ab5eb0abf13385f851315585cc37ef330dd88e27ec3d34d651fd47a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   httpx
 apache-airflow==2.10.5 \
     --hash=sha256:1a2b1f1082d530fee039989cdff7192fcfd98d8e909d1c5650e61e10c418e488 \
     --hash=sha256:4c6d19159bcd85f496fbea70db72ef55d32335f80e4ffb82ae3c252782079ca0
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flowpyter-task (setup.py)
     #   apache-airflow-providers-common-compat
     #   apache-airflow-providers-common-io
@@ -130,20 +130,20 @@ apache-airflow-providers-common-compat==1.3.0 \
     --hash=sha256:f4e125eba88078bda95cec5144debe519460276f33e214260a7e471bbe8d8c5d \
     --hash=sha256:fc63b30baa72c9aff810087898a957555e0f67281a7b2430f3a1d322a7abb9fb
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-fab
 apache-airflow-providers-common-io==1.5.0 \
     --hash=sha256:5eae7b705f600347d7f2e208696be76951db18e380f7534d0416932300b67e85 \
     --hash=sha256:74accdef8c0c8b0a38f6f607b7c33c9dc2a5c5d1b6ff992b5dee605cf71e7c49
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apache-airflow-providers-common-sql==1.21.0 \
     --hash=sha256:87d26eab25fb09e0b04e14f563dfc3a365fc86e2452211e075229dcb8ce142d2 \
     --hash=sha256:bcab9432a50c46b9a23d2203c2a9beb682f039c28da6b5882c70dc3ab80ac826
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-sqlite
 apache-airflow-providers-docker==4.4.0 \
@@ -154,68 +154,68 @@ apache-airflow-providers-fab==1.5.2 \
     --hash=sha256:22744241fd8f5dfd4575f02775afa00b3a965b04799b67fd0a42678f994ec3ba \
     --hash=sha256:62180f0f2cab0060b4370bda43040fe1ebdeb656297de797b1bc846cfe7d63e3
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apache-airflow-providers-ftp==3.12.0 \
     --hash=sha256:46518cc3dfcd21545ca7a4f342b415296cdd8daa6036c174d45d734d4b53a802 \
     --hash=sha256:91430e2d1c0f323b361e2c6b08de649103ee10e6c8977dde3fd5cc42db84c505
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apache-airflow-providers-http==5.0.0 \
     --hash=sha256:27e8902afad082bc05d05ec625b7f3c24ef3467a95813f3471b1c6eaea991ef8 \
     --hash=sha256:3869cb1dcdcd9a13a4416e91e2fc2bccbec27598115ad9ef1dc4596831ffbf17
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apache-airflow-providers-imap==3.8.0 \
     --hash=sha256:29e024ab590dfd33049ef3bd62357b742e0adbd4fd16426e595ea7ec5e62f776 \
     --hash=sha256:559104033a5d7500ac988ef2a876917afa79ccabacfa0169e5698ad04026036b
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apache-airflow-providers-smtp==1.9.0 \
     --hash=sha256:012ca6abe1b8e241a90b3e627d4b4fdfc9c467f84c0b849ba97e9b22f0a135af \
     --hash=sha256:73f0d2bd0ab945fee7c7b7d0c21a8e60c744e5a0dd2d216a4b3b31045b98bf57
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apache-airflow-providers-sqlite==4.0.0 \
     --hash=sha256:b667c94b9f4e71fb7d1392bec9018fcc8fef8a8741edb0f248221a9e56e7b1e5 \
     --hash=sha256:e83e642372292dcf79fecbab986fc4778728eef1a9854ebe6702e25c8096fc6f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 apispec==6.8.1 \
     --hash=sha256:eacba00df745efc9adb2a45cf992300e87938582077e101fb26b78ecf4320beb \
     --hash=sha256:f4916cbb7be156963b18f5929a0e42bd2349135834b680a81b12432bcfaa9a39
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 argcomplete==3.5.3 \
     --hash=sha256:2ab2c4a215c59fd6caaff41a869480a23e8f6a5f910b266c1808037f4e375b61 \
     --hash=sha256:c12bf50eded8aebb298c7b7da7a5ff3ee24dffd9f5281867dfe1424b58c55392
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 asgiref==3.8.1 \
     --hash=sha256:3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47 \
     --hash=sha256:c343bd80a0bec947a9860adb4c432ffa7db769836c64238fc34bdc3fec84d590
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-http
 async-timeout==5.0.1 ; python_full_version < '3.11' \
     --hash=sha256:39e3809566ff85354557ec2398b55e096c8364bacac9405a7a1fa429e77fe76c \
     --hash=sha256:d9321a7a3d5a6a5e187e824d2fa0793ce379a202935782d555d6e9d2735677d3
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
 attrs==25.1.0 \
     --hash=sha256:1c97078a80c814273a76b2a298a932eb681c87415c11dee0a6921de7f1b02c3e \
     --hash=sha256:c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
     #   apache-airflow
     #   jsonschema
@@ -224,26 +224,26 @@ babel==2.17.0 \
     --hash=sha256:0c54cffb19f690cdcc52a3b50bcbf71e07a808d1c80d549f2459b9d2cf0afb9d \
     --hash=sha256:4d0b53093fdfb4b21c92b5213dba5a1b23885afa8383709427046b21c366e5f2
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-babel
 blinker==1.9.0 \
     --hash=sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf \
     --hash=sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 cachelib==0.9.0 \
     --hash=sha256:38222cc7c1b79a23606de5c2607f4925779e37cdcea1c2ad21b8bae94b5425a5 \
     --hash=sha256:811ceeb1209d2fe51cd2b62810bd1eccf70feba5c52641532498be5c675493b3
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-caching
     #   flask-session
 certifi==2025.1.31 \
     --hash=sha256:3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651 \
     --hash=sha256:ca78db4565a652026a4db2bcdf68f2fb589ea80d0be70e03929ed730746b84fe
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   httpcore
     #   httpx
     #   requests
@@ -316,7 +316,7 @@ cffi==1.17.1 ; platform_python_implementation != 'PyPy' \
     --hash=sha256:f7f5baafcc48261359e14bcd6d9bff6d4b28d9103847c9e136694cb0501aef87 \
     --hash=sha256:fc48c783f9c87e60831201f2cce7f3b2e4846bf4d8728eabe54d60700b318a0b
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   cryptography
 charset-normalizer==3.4.1 \
     --hash=sha256:0167ddc8ab6508fe81860a57dd472b2ef4060e8d378f0cc555707126830f2537 \
@@ -412,13 +412,13 @@ charset-normalizer==3.4.1 \
     --hash=sha256:fd4ec41f914fa74ad1b8304bbc634b3de73d2a0889bd32076342a573e0779e00 \
     --hash=sha256:ffc9202a29ab3920fa812879e95a9e78b2465fd10be7fcbd042899695d75e616
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   requests
 click==8.1.8 \
     --hash=sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2 \
     --hash=sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   clickclick
     #   flask
     #   flask-appbuilder
@@ -426,13 +426,13 @@ clickclick==20.10.2 \
     --hash=sha256:4efb13e62353e34c5eef7ed6582c4920b418d7dedc86d819e22ee089ba01802c \
     --hash=sha256:c8f33e6d9ec83f68416dd2136a7950125bd256ec39ccc9a85c6e280a16be2bb5
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   connexion
 colorama==0.4.6 \
     --hash=sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44 \
     --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   click
     #   colorlog
     #   flask-appbuilder
@@ -440,31 +440,31 @@ colorlog==6.9.0 \
     --hash=sha256:5906e71acd67cb07a71e779c47c4bcb45fb8c2993eebe9e5adcd6a6f1b283eff \
     --hash=sha256:bfba54a1b93b94f54e1f4fe48395725a3d92fd2a4af702f6bd70946bdc0c6ac2
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 configupdater==3.2 \
     --hash=sha256:0f65a041627d7693840b4dd743581db4c441c97195298a29d075f91b79539df2 \
     --hash=sha256:9fdac53831c1b062929bf398b649b87ca30e7f1a735f3fbf482072804106306b
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 connexion==2.14.2 \
     --hash=sha256:a73b96a0e07b16979a42cde7c7e26afe8548099e352cf350f80c57185e0e0b36 \
     --hash=sha256:dbc06f52ebeebcf045c9904d570f24377e8bbd5a6521caef15a06f634cf85646
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 cron-descriptor==1.4.5 \
     --hash=sha256:736b3ae9d1a99bc3dbfc5b55b5e6e7c12031e7ba5de716625772f8b02dcd6013 \
     --hash=sha256:f51ce4ffc1d1f2816939add8524f206c376a42c87a5fca3091ce26725b3b1bca
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 croniter==6.0.0 \
     --hash=sha256:2f878c3856f17896979b2a4379ba1f09c83e374931ea15cc835c5dd2eee9b368 \
     --hash=sha256:37c504b313956114a983ece2c2b07790b1f1094fe9d81cc94739214748255577
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 cryptography==42.0.8 \
     --hash=sha256:013629ae70b40af70c9a7a5db40abe5d9054e6f4380e50ce769947b73bf3caad \
@@ -500,13 +500,13 @@ cryptography==42.0.8 \
     --hash=sha256:fa76fbb7596cc5839320000cdd5d0955313696d9511debab7ee7278fc8b5c84a \
     --hash=sha256:fff12c88a672ab9c9c1cf7b0c80e3ad9e2ebd9d828d955c126be4fd3e5578c9e
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 deprecated==1.2.18 \
     --hash=sha256:422b6f6d859da6f2ef57857761bfb392480502a64c3028ca9bbe86085d72115d \
     --hash=sha256:bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   limits
     #   opentelemetry-api
@@ -516,13 +516,13 @@ deprecated==1.2.18 \
 dill==0.3.1.1 \
     --hash=sha256:42d8ef819367516592a825746a18073ced42ca169ab1f5f4044134703e7a049c
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 dnspython==2.7.0 \
     --hash=sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86 \
     --hash=sha256:ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   email-validator
 docker==7.1.0 \
     --hash=sha256:ad8c70e6e3f8926cb8a92619b832b4ea5299e2831c14284663184e200546fa6c \
@@ -532,19 +532,19 @@ email-validator==2.2.0 \
     --hash=sha256:561977c2d73ce3611850a06fa56b414621e0c8faa9d66f2611407d87465da631 \
     --hash=sha256:cb690f344c617a714f22e66ae771445a1ceb46821152df8e165c5f9a364582b7
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 exceptiongroup==1.2.2 ; python_full_version < '3.11' \
     --hash=sha256:3111b9d131c238bec2f8f516e123e14ba243563fb135d3fe885990585aa7795b \
     --hash=sha256:47c2edf7c6738fafb49fd34290706d1a1a2f4d1c6df275526b62cbb4aa5393cc
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   anyio
 flask==2.2.5 \
     --hash=sha256:58107ed83443e86067e41eff4631b058178191a355886f8e479e347fa1285fdf \
     --hash=sha256:edee9b0a7ff26621bd5a8c10ff484ae28737a2410d99b0bb9a6850c7fb977aa0
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-fab
     #   connexion
@@ -561,56 +561,56 @@ flask-appbuilder==4.5.2 \
     --hash=sha256:4962a73eafb62b8790fc425970a2f09727974bcff31a1ded0c9eaa8d50b32580 \
     --hash=sha256:a2242386a7f77df7020654b4d546a9dbac105058d2cd058b7fd9b1db457c2f32
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-fab
 flask-babel==2.0.0 \
     --hash=sha256:e6820a052a8d344e178cdd36dd4bb8aea09b4bda3d5f9fa9f008df2c7f2f5468 \
     --hash=sha256:f9faf45cdb2e1a32ea2ec14403587d4295108f35017a7821a2b1acb8cfd9257d
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 flask-caching==2.3.0 \
     --hash=sha256:51771c75682e5abc1483b78b96d9131d7941dc669b073852edfa319dd4e29b6e \
     --hash=sha256:d7e4ca64a33b49feb339fcdd17e6ba25f5e01168cf885e53790e885f83a4d2cf
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 flask-jwt-extended==4.7.1 \
     --hash=sha256:52f35bf0985354d7fb7b876e2eb0e0b141aaff865a22ff6cc33d9a18aa987978 \
     --hash=sha256:8085d6757505b6f3291a2638c84d207e8f0ad0de662d1f46aa2f77e658a0c976
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 flask-limiter==3.10.1 \
     --hash=sha256:5ff8395f2acbc565ba6af43dc4b9c5b0a3665989681791d01dfaa6388bb332c6 \
     --hash=sha256:afa3bfa9854dd2d3267816fcfcdfa91bcadf055acc4d2461119a2670306fbccb
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 flask-login==0.6.3 \
     --hash=sha256:5e23d14a607ef12806c699590b89d0f0e0d67baeec599d75947bf9c147330333 \
     --hash=sha256:849b25b82a436bf830a054e74214074af59097171562ab10bfa999e6b78aae5d
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-fab
     #   flask-appbuilder
 flask-session==0.5.0 \
     --hash=sha256:1619bcbc16f04f64e90f8e0b17145ba5c9700090bb1294e889956c1282d58631 \
     --hash=sha256:190875e6aebf2953c6803d42379ef3b934bc209ef8ef006f97aecb08f5aaeb86
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 flask-sqlalchemy==2.5.1 \
     --hash=sha256:2bda44b43e7cacb15d4e05ff3cc1f8bc97936cc464623424102bfc2c35e95912 \
     --hash=sha256:f12c3d4cc5cc7fdcc148b9527ea05671718c3ea45d50c7e732cceb33f574b390
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 flask-wtf==1.2.2 \
     --hash=sha256:79d2ee1e436cf570bccb7d916533fa18757a2f18c290accffab1b9a0b684666b \
     --hash=sha256:e93160c5c5b6b571cf99300b6e01b72f9a101027cab1579901f8b10c5daf0b70
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   flask-appbuilder
 frozenlist==1.5.0 \
@@ -707,14 +707,14 @@ frozenlist==1.5.0 \
     --hash=sha256:fd74520371c3c4175142d02a976aee0b4cb4a7cc912a60586ffd8d5929979b30 \
     --hash=sha256:feeb64bc9bcc6b45c6311c9e9b99406660a9c05ca8a5b30d14a78555088b0b3a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
     #   aiosignal
 fsspec==2025.2.0 \
     --hash=sha256:1c24b16eaa0a1798afa0337aa0db9b256718ab2a89c425371f5628d22c3b6afd \
     --hash=sha256:9de2ad9ce1f85e1931858535bc882543171d197001a0a5eb2ddc04f1781ab95b
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   universal-pathlib
 google-re2==1.1.20240702 \
@@ -770,14 +770,14 @@ google-re2==1.1.20240702 \
     --hash=sha256:f853c3c68bed0d127e6ef8b29ee85461d9d0a4fa407e3f97e41ecd6803d24d88 \
     --hash=sha256:fb025d4bcd1a3032546da048a6dcb39359967f4df6b3514e76e983256235f694
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-fab
 googleapis-common-protos==1.66.0 \
     --hash=sha256:c3e7b33d15fdca5374cc0a7346dd92ffa847425cc4ea941d970f13680052ec8c \
     --hash=sha256:d7abcd75fabb2e0ec9f74466401f6c119a0b498e27370e9be4c94cb7e382b8ed
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
 greenlet==3.2.3 ; platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64' \
@@ -884,37 +884,37 @@ grpcio==1.65.5 \
     --hash=sha256:fa36dd8496d3af0d40165252a669fa4f6fd2db4b4026b9a9411cbf060b9d6a15 \
     --hash=sha256:fe6505376f5b00bb008e4e1418152e3ad3d954b629da286c7913ff3cfc0ff740
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp-proto-grpc
 gunicorn==23.0.0 \
     --hash=sha256:ec400d38950de4dfd418cff8328b2c8faed0edb0d517d3394e457c317908ca4d \
     --hash=sha256:f014447a0101dc57e294f6c18ca6b40227a4c90e9bdb586042628030cba004ec
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 h11==0.14.0 \
     --hash=sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d \
     --hash=sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   httpcore
 httpcore==1.0.7 \
     --hash=sha256:8551cb62a169ec7162ac7be8d4817d561f60e08eaa485234898414bb5a8a0b4c \
     --hash=sha256:a3fff8f43dc260d5bd363d9f9cf1830fa3a458b332856f34282de498ed420edd
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   httpx
 httpx==0.27.0 \
     --hash=sha256:71d5465162c13681bff01ad59b2cc68dd838ea1f10e51574bac27103f00c91a5 \
     --hash=sha256:a0cb88a46f32dc874e04ee956e4c2764aba2aa228f650b06788ba6bda2962ab5
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 idna==3.10 \
     --hash=sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9 \
     --hash=sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   anyio
     #   email-validator
     #   httpx
@@ -924,20 +924,20 @@ importlib-metadata==6.11.0 \
     --hash=sha256:1231cf92d825c9e03cfc4da076a16de6422c863558229ea0b22b675657463443 \
     --hash=sha256:f0afba6205ad8f8947c7d338b5342d5db2afbfd82f9cbef7879a9539cc12eb9b
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   opentelemetry-api
 inflection==0.5.1 \
     --hash=sha256:1a29730d366e996aaacffb2f1f1cb9593dc38e2ddd30c91250c6dde09ea9b417 \
     --hash=sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   connexion
 itsdangerous==2.2.0 \
     --hash=sha256:c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef \
     --hash=sha256:e0050c0b7da1eea53ffaf149c0cfbb5c6e2e2b69c4bef22c81fa6eb73e5f6173
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   connexion
     #   flask
@@ -946,7 +946,7 @@ jinja2==3.1.5 \
     --hash=sha256:8fefff8dc3034e27bb80d67c671eb8a9bc424c0ef4c0826edbff304cceff43bb \
     --hash=sha256:aba0f4dc9ed8013c424088f68a5c226f7d6097ed89b246d7749c2ec4175c6adb
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   flask
     #   flask-babel
@@ -955,13 +955,13 @@ jmespath==0.10.0 \
     --hash=sha256:b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9 \
     --hash=sha256:cdf6525904cc597730141d61b36f2e4b8ecc257c420fa2f4549bac2c2d0cb72f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-fab
 jsonschema==4.23.0 \
     --hash=sha256:d71497fef26351a33265337fa77ffeb82423f3ea21283cd9467bb03999266bc4 \
     --hash=sha256:fbadb6f8b144a8f8cf9f0b89ba94501d143e50411a1278633f56a7acf7fd5566
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   connexion
     #   flask-appbuilder
@@ -969,7 +969,7 @@ jsonschema-specifications==2024.10.1 \
     --hash=sha256:0f38b83639958ce1152d02a7f062902c41c8fd20d558b0c34344292d417ae272 \
     --hash=sha256:a09a0680616357d9a0ecf05c12ad234479f549239d0f5b55f3deea67475da9bf
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   jsonschema
 lazy-object-proxy==1.10.0 \
     --hash=sha256:009e6bb1f1935a62889ddc8541514b6a9e1fcf302667dcb049a0be5c8f613e56 \
@@ -1010,38 +1010,38 @@ lazy-object-proxy==1.10.0 \
     --hash=sha256:edb45bb8278574710e68a6b021599a10ce730d156e5b254941754a9cc0b17d03 \
     --hash=sha256:fec03caabbc6b59ea4a638bee5fce7117be8e99a4103d9d5ad77f15d6f81020c
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 limits==4.0.1 \
     --hash=sha256:67667e669f570cf7be4e2c2bc52f763b3f93bdf66ea945584360bc1a3f251901 \
     --hash=sha256:a54f5c058dfc965319ae3ee78faf222294659e371b46d22cd7456761f7e46d5a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-limiter
 linkify-it-py==2.0.3 \
     --hash=sha256:68cda27e162e9215c17d786649d1da0021a451bdc436ef9e0fa0ba5234b9b048 \
     --hash=sha256:6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 lockfile==0.12.2 \
     --hash=sha256:6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799 \
     --hash=sha256:6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   python-daemon
 mako==1.3.8 \
     --hash=sha256:42f48953c7eb91332040ff567eb7eea69b22e7a4affbc5ba8e845e8f730f6627 \
     --hash=sha256:577b97e414580d3e088d47c2dbbe9594aa7a5146ed2875d4dfa9075af2dd3cc8
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   alembic
 markdown-it-py==3.0.0 \
     --hash=sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1 \
     --hash=sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   mdit-py-plugins
     #   rich
@@ -1108,7 +1108,7 @@ markupsafe==3.0.2 \
     --hash=sha256:f8b3d067f2e40fe93e1ccdd6b2e1d16c43140e76f02fb1319a05cf2b79d99430 \
     --hash=sha256:fcabf5ff6eea076f859677f5f0b6b5c1a51e70a376b0579e0eadef8db48c6b50
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   jinja2
     #   mako
@@ -1118,7 +1118,7 @@ marshmallow==3.26.0 \
     --hash=sha256:1287bca04e6a5f4094822ac153c03da5e214a0a60bcd557b140f3e66991b8ca1 \
     --hash=sha256:eb36762a1cc76d7abf831e18a3a1b26d3d481bbc74581b8e532a3d3a8115e1cb
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
     #   marshmallow-oneofschema
     #   marshmallow-sqlalchemy
@@ -1126,37 +1126,37 @@ marshmallow-oneofschema==3.1.1 \
     --hash=sha256:68b4a57d0281a04ac25d4eb7a4c5865a57090a0a8fd30fd6362c8e833ac6a6d9 \
     --hash=sha256:ff4cb2a488785ee8edd521a765682c2c80c78b9dc48894124531bdfa1ec9303b
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 marshmallow-sqlalchemy==0.28.2 \
     --hash=sha256:2ab0f1280c793e5aec81deab3e63ec23688ddfe05e5f38ac960368a1079520a1 \
     --hash=sha256:c31b3bdf794de1d78c53e1c495502cbb3eeb06ed216869980c71d6159e7e9e66
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 mdit-py-plugins==0.4.2 \
     --hash=sha256:0c673c3f889399a33b95e88d2f0d111b4447bdfea7f237dab2d488f459835636 \
     --hash=sha256:5f2cd1fdb606ddf152d37ec30e46101a60512bc0e5fa1a7002c36647b09e26b5
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 mdurl==0.1.2 \
     --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8 \
     --hash=sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   markdown-it-py
 methodtools==0.4.7 \
     --hash=sha256:5e188c780b236adc12e75b5f078c5afb419ef99eb648569fc6d7071f053a1f11 \
     --hash=sha256:e213439dd64cfe60213f7015da6efe5dd4003fd89376db3baa09fe13ec2bb0ba
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 more-itertools==10.6.0 \
     --hash=sha256:2cd7fad1009c31cc9fb6a035108509e6547547a7a738374f10bd49a09eb3ee3b \
     --hash=sha256:6eb054cb4b6db1473f6e15fcc676a08e4732548acd47c708f0e179c2c7c01e89
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-common-sql
 multidict==6.1.0 \
     --hash=sha256:052e10d2d37810b99cc170b785945421141bf7bb7d2f8799d431e7db229c385f \
@@ -1252,14 +1252,14 @@ multidict==6.1.0 \
     --hash=sha256:f90c822a402cb865e396a504f9fc8173ef34212a342d92e362ca498cad308e28 \
     --hash=sha256:ff3827aef427c89a25cc96ded1759271a93603aba9fb977a6d264648ebf989db
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
     #   yarl
 opentelemetry-api==1.27.0 \
     --hash=sha256:953d5871815e7c30c81b56d910c707588000fff7a3ca1c73e6531911d53065e7 \
     --hash=sha256:ed673583eaa5f81b5ce5e86ef7cdaf622f88ef65f0b9aab40b843dcae5bef342
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
@@ -1269,32 +1269,32 @@ opentelemetry-exporter-otlp==1.27.0 \
     --hash=sha256:4a599459e623868cc95d933c301199c2367e530f089750e115599fccd67cb2a1 \
     --hash=sha256:7688791cbdd951d71eb6445951d1cfbb7b6b2d7ee5948fac805d404802931145
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 opentelemetry-exporter-otlp-proto-common==1.27.0 \
     --hash=sha256:159d27cf49f359e3798c4c3eb8da6ef4020e292571bd8c5604a2a573231dd5c8 \
     --hash=sha256:675db7fffcb60946f3a5c43e17d1168a3307a94a930ecf8d2ea1f286f3d4f79a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
 opentelemetry-exporter-otlp-proto-grpc==1.27.0 \
     --hash=sha256:56b5bbd5d61aab05e300d9d62a6b3c134827bbd28d0b12f2649c2da368006c9e \
     --hash=sha256:af6f72f76bcf425dfb5ad11c1a6d6eca2863b91e63575f89bb7b4b55099d968f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp
 opentelemetry-exporter-otlp-proto-http==1.27.0 \
     --hash=sha256:2103479092d8eb18f61f3fbff084f67cc7f2d4a7d37e75304b8b56c1d09ebef5 \
     --hash=sha256:688027575c9da42e179a69fe17e2d1eba9b14d81de8d13553a21d3114f3b4d75
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp
 opentelemetry-proto==1.27.0 \
     --hash=sha256:33c9345d91dafd8a74fc3d7576c5a38f18b7fdf8d02983ac67485386132aedd6 \
     --hash=sha256:b133873de5581a50063e1e4b29cdcf0c5e253a8c2d8dc1229add20a4c3830ace
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp-proto-common
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
@@ -1302,26 +1302,26 @@ opentelemetry-sdk==1.27.0 \
     --hash=sha256:365f5e32f920faf0fd9e14fdfd92c086e317eaa5f860edba9cdc17a380d9197d \
     --hash=sha256:d525017dea0ccce9ba4e0245100ec46ecdc043f2d7b8315d56b19aff0904fa6f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
 opentelemetry-semantic-conventions==0.48b0 \
     --hash=sha256:12d74983783b6878162208be57c9effcb89dc88691c64992d70bb89dc00daa1a \
     --hash=sha256:a0de9f45c413a8669788a38569c7e0a11ce6ce97861a628cca785deecdc32a1f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   opentelemetry-sdk
 ordered-set==4.1.0 \
     --hash=sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562 \
     --hash=sha256:694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-limiter
 packaging==24.2 \
     --hash=sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759 \
     --hash=sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apispec
     #   connexion
@@ -1333,7 +1333,7 @@ pathspec==0.12.1 \
     --hash=sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08 \
     --hash=sha256:a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 pendulum==3.0.0 \
     --hash=sha256:04a1094a5aa1daa34a6b57c865b25f691848c61583fb22722a4df5699f6bf74c \
@@ -1420,19 +1420,19 @@ pendulum==3.0.0 \
     --hash=sha256:fd69b15374bef7e4b4440612915315cc42e8575fcda2a3d7586a0d88192d0c88 \
     --hash=sha256:fde4d0b2024b9785f66b7f30ed59281bd60d63d9213cda0eb0910ead777f6d37
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 pluggy==1.5.0 \
     --hash=sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1 \
     --hash=sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 prison==0.2.1 \
     --hash=sha256:e6cd724044afcb1a8a69340cad2f1e3151a5839fd3a8027fd1357571e797c599 \
     --hash=sha256:f90bab63fca497aa0819a852f64fb21a4e181ed9f6114deaa5dc04001a7555c5
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 propcache==0.2.1 \
     --hash=sha256:03ff9d3f665769b2a85e6157ac8b439644f2d7fd17615a82fa55739bc97863f4 \
@@ -1518,7 +1518,7 @@ propcache==0.2.1 \
     --hash=sha256:f7a31fc1e1bd362874863fdeed71aed92d348f5336fd84f2197ba40c59f061bd \
     --hash=sha256:f9479aa06a793c5aeba49ce5c5692ffb51fcd9a7016e017d555d5e2b0045d212
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
     #   yarl
 protobuf==4.25.6 \
@@ -1534,7 +1534,7 @@ protobuf==4.25.6 \
     --hash=sha256:b8f837bfb77513fe0e2f263250f423217a173b6d85135be4d81e96a4653bcd3c \
     --hash=sha256:f8cfbae7c5afd0d0eaccbe73267339bff605a2315860bb1ba08eb66670a9a91f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   googleapis-common-protos
     #   opentelemetry-proto
 psutil==6.1.1 \
@@ -1556,7 +1556,7 @@ psutil==6.1.1 \
     --hash=sha256:f35cfccb065fff93529d2afb4a2e89e363fe63ca1e4a5da22b603a85833c2649 \
     --hash=sha256:fc0ed7fe2231a444fc219b9c42d0376e0a9a1a72f16c5cfa0f68d19f1a0663e8
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 psycopg2-binary==2.9.10 \
     --hash=sha256:04392983d0bb89a8717772a193cfaac58871321e3ec69514e1c4e0d4957b5aff \
@@ -1628,26 +1628,26 @@ psycopg2-binary==2.9.10 \
     --hash=sha256:f8157bed2f51db683f31306aa497311b560f2265998122abe1dce6428bd86567 \
     --hash=sha256:ffe8ed017e4ed70f68b7b371d84b7d4a790368db9203dfc2d222febd3a9c8863
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flowpyter-task (setup.py)
 pycparser==2.22 ; platform_python_implementation != 'PyPy' \
     --hash=sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6 \
     --hash=sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   cffi
 pygments==2.19.1 \
     --hash=sha256:61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f \
     --hash=sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   rich
 pyjwt==2.10.1 \
     --hash=sha256:3cc5772eb20009233caf06e9d8a0577824723b44e6648ee0a2aedb6cf9381953 \
     --hash=sha256:dcdd193e30abefd5debf142f9adfcdd2b58004e644f25406ffaebd50bd98dacb
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   flask-appbuilder
     #   flask-jwt-extended
@@ -1655,13 +1655,13 @@ python-daemon==3.1.2 \
     --hash=sha256:b906833cef63502994ad48e2eab213259ed9bb18d54fa8774dcba2ff7864cec6 \
     --hash=sha256:f7b04335adc473de877f5117e26d5f1142f4c9f7cd765408f0877757be5afbf4
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 python-dateutil==2.9.0.post0 \
     --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
     --hash=sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   croniter
     #   flask-appbuilder
@@ -1674,20 +1674,20 @@ python-dotenv==1.1.1 \
 python-nvd3==0.16.0 \
     --hash=sha256:0115887289b3f751716ddd05c7b53ac5f05e71201e52496decdac453a50dcf7e
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 python-slugify==8.0.4 \
     --hash=sha256:276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8 \
     --hash=sha256:59202371d1d05b54a9e7720c5e038f928f45daaffe41dd10822f3907b937c856
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   python-nvd3
 pytz==2025.1 \
     --hash=sha256:89dd22dca55b46eac6eda23b2d72721bf1bdfef212645d81513ef5d03038de57 \
     --hash=sha256:c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   croniter
     #   flask-babel
 pywin32==310 ; sys_platform == 'win32' \
@@ -1763,7 +1763,7 @@ pyyaml==6.0.2 \
     --hash=sha256:f753120cb8181e736c57ef7636e83f31b9c0d1722c516f7e86cf15b7aa57ff12 \
     --hash=sha256:ff3824dc5261f50c9b0dfb3be22b4567a6f938ccce4587b38952d85fd9e9afe4
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apispec
     #   clickclick
     #   connexion
@@ -1771,14 +1771,14 @@ referencing==0.36.2 \
     --hash=sha256:df2e89862cd09deabbdba16944cc3f10feb6b3e6f18e902f7cc25609a34775aa \
     --hash=sha256:e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   jsonschema
     #   jsonschema-specifications
 requests==2.32.3 \
     --hash=sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760 \
     --hash=sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-http
     #   connexion
@@ -1789,20 +1789,20 @@ requests-toolbelt==1.0.0 \
     --hash=sha256:7681a0a3d047012b5bdc0ee37d7f8f07ebe76ab08caeccfc3921ce23c88d5bc6 \
     --hash=sha256:cccfdd665f0a24fcf4726e690f65639d272bb0637b9b92dfd91a5568ccf6bd06
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   apache-airflow-providers-http
 rfc3339-validator==0.1.4 \
     --hash=sha256:138a2abdf93304ad60530167e51d2dfb9549521a836871b88d7f4695d0022f6b \
     --hash=sha256:24f6ec1eda14ef823da9e36ec7113124b39c04d50a4d3d3a3c2859577e7791fa
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 rich==13.9.4 \
     --hash=sha256:439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098 \
     --hash=sha256:6049d5e6ec054bf2779ab3358186963bac2ea89175919d699e378b99738c2a90
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   flask-limiter
     #   rich-argparse
@@ -1810,7 +1810,7 @@ rich-argparse==1.6.0 \
     --hash=sha256:092083c30da186f25bcdff8b1d47fdfb571288510fb051e0488a72cc3128de13 \
     --hash=sha256:fbe70a1d821b3f2fa8958cddf0cae131870a6e9faa04ab52b409cb1eda809bd7
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 rpds-py==0.22.3 \
     --hash=sha256:009de23c9c9ee54bf11303a966edf4d9087cd43a6003672e6aa7def643d06518 \
@@ -1917,7 +1917,7 @@ rpds-py==0.22.3 \
     --hash=sha256:fda7cb070f442bf80b642cd56483b5548e43d366fe3f39b98e67cce780cded00 \
     --hash=sha256:feea821ee2a9273771bae61194004ee2fc33f8ec7db08117ef9147d4bbcbca8e
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   jsonschema
     #   referencing
 setproctitle==1.3.4 \
@@ -2007,13 +2007,13 @@ setproctitle==1.3.4 \
     --hash=sha256:fc9d79b1bf833af63b7c720a6604eb16453ac1ad4e718eb8b59d1f97d986b98c \
     --hash=sha256:ffcb09d5c0ffa043254ec9a734a73f3791fec8bf6333592f906bb2e91ed2af1a
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 six==1.17.0 \
     --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274 \
     --hash=sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   prison
     #   python-dateutil
     #   rfc3339-validator
@@ -2022,7 +2022,7 @@ sniffio==1.3.1 \
     --hash=sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2 \
     --hash=sha256:f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   anyio
     #   httpx
 sqlalchemy==1.4.54 \
@@ -2071,7 +2071,7 @@ sqlalchemy==1.4.54 \
     --hash=sha256:fb59a11689ff3c58e7652260127f9e34f7f45478a2f3ef831ab6db7bcd72108f \
     --hash=sha256:fc9ffd9a38e21fad3e8c5a88926d57f94a32546e937e0be46142b2702003eba7
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   alembic
     #   apache-airflow
     #   flask-appbuilder
@@ -2083,43 +2083,43 @@ sqlalchemy-jsonfield==1.0.2 \
     --hash=sha256:b2945fa1e60b07d5764a7c73b18da427948b35dd4c07c0e94939001dc2dacf77 \
     --hash=sha256:dab3abc9d75a1640e7f3d4875564a4199f665d27863da8d5a089e4eaca5e67f2
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 sqlalchemy-utils==0.41.2 \
     --hash=sha256:85cf3842da2bf060760f955f8467b87983fb2e30f1764fd0e24a48307dc8ec6e \
     --hash=sha256:bc599c8c3b3319e53ce6c5c3c471120bd325d0071fb6f38a10e924e3d07b9990
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
 sqlparse==0.5.3 \
     --hash=sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272 \
     --hash=sha256:cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow-providers-common-sql
 tabulate==0.9.0 \
     --hash=sha256:0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c \
     --hash=sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 tenacity==9.0.0 \
     --hash=sha256:807f37ca97d62aa361264d497b0e31e92b8027044942bfa756160d908320d73b \
     --hash=sha256:93de0c98785b27fcf659856aa9f54bfbd399e29969b0621bc7f762bd441b4539
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 termcolor==2.5.0 \
     --hash=sha256:37b17b5fc1e604945c2642c872a3764b5d547a48009871aea3edd3afa180afb8 \
     --hash=sha256:998d8d27da6d48442e8e1f016119076b690d962507531df4890fcd2db2ef8a6f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 text-unidecode==1.3 \
     --hash=sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8 \
     --hash=sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   python-slugify
 time-machine==2.16.0 ; implementation_name != 'pypy' \
     --hash=sha256:01bc257e9418980a4922de94775be42a966e1a082fb01a1635917f9afc7b84ca \
@@ -2179,13 +2179,13 @@ time-machine==2.16.0 ; implementation_name != 'pypy' \
     --hash=sha256:ef768e14768eebe3bb1196c0dece8e14c1c6991605721214a0c3c68cf77eb216 \
     --hash=sha256:f6927dda86425f97ffda36131f297b1a601c64a6ee6838bfa0e6d3149c2f0d9f
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   pendulum
 typing-extensions==4.12.2 \
     --hash=sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d \
     --hash=sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiosqlite
     #   alembic
     #   anyio
@@ -2200,32 +2200,32 @@ tzdata==2025.1 \
     --hash=sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694 \
     --hash=sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   pendulum
 uc-micro-py==1.0.3 \
     --hash=sha256:d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a \
     --hash=sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   linkify-it-py
 universal-pathlib==0.2.6 \
     --hash=sha256:50817aaeaa9f4163cb1e76f5bdf84207fa05ce728b23fd779479b3462e5430ac \
     --hash=sha256:700dec2b58ef34b87998513de6d2ae153b22f083197dfafb8544744edabd1b18
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
 urllib3==2.3.0 \
     --hash=sha256:1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df \
     --hash=sha256:f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   docker
     #   requests
 werkzeug==2.2.3 \
     --hash=sha256:2e1ccc9417d4da358b9de6f174e3ac094391ea1d4fbef2d667865d819dfd0afe \
     --hash=sha256:56433961bc1f12533306c624f3be5e744389ac61d722175d543e1751285da612
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   apache-airflow
     #   connexion
     #   flask
@@ -2236,7 +2236,7 @@ wirerope==1.0.0 \
     --hash=sha256:59346555c7b5dbd1c683a4e123f8bed30ca99df646f6867ea6439ceabf43c2f6 \
     --hash=sha256:7da8bb6feeff9dd939bd7141ef0dc392674e43ba662e20909d6729db81a7c8d0
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   methodtools
 wrapt==1.17.2 \
     --hash=sha256:08e7ce672e35efa54c5024936e559469436f8b8096253404faeb54d2a878416f \
@@ -2319,13 +2319,13 @@ wrapt==1.17.2 \
     --hash=sha256:fc78a84e2dfbc27afe4b2bd7c80c8db9bca75cc5b85df52bfe634596a1da846b \
     --hash=sha256:ff04ef6eec3eee8a5efef2401495967a916feaa353643defcc03fc74fe213b58
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   deprecated
 wtforms==3.2.1 \
     --hash=sha256:583bad77ba1dd7286463f21e11aa3043ca4869d03575921d1a1698d0715e0fd4 \
     --hash=sha256:df3e6b70f3192e92623128123ec8dca3067df9cfadd43d59681e210cfb8d4682
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   flask-appbuilder
     #   flask-wtf
 yarl==1.18.3 \
@@ -2412,11 +2412,11 @@ yarl==1.18.3 \
     --hash=sha256:fe57328fbc1bfd0bd0514470ac692630f3901c0ee39052ae47acd1d90a436719 \
     --hash=sha256:fea09ca13323376a2fdfb353a5fa2e59f90cd18d7ca4eaa1fd31f0a8b4f91e62
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   aiohttp
 zipp==3.21.0 \
     --hash=sha256:2c9958f6430a2040341a52eb608ed6dd93ef4392e02ffe219417c1b28b5dd1f4 \
     --hash=sha256:ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931
     # via
-    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.33.1/flowetl/requirements.txt
+    #   -c https://raw.githubusercontent.com/Flowminder/FlowKit/1.34.0/flowetl/requirements.txt
     #   importlib-metadata
