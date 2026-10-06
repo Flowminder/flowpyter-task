@@ -872,14 +872,7 @@ in one notebook, and read and print its contents in the other:</p>
 
               <details class="quote">
                 <summary>Source code in <code>flowpytertask/flowpytertask.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">400</span>
-<span class="normal">401</span>
-<span class="normal">402</span>
-<span class="normal">403</span>
-<span class="normal">404</span>
-<span class="normal">405</span>
-<span class="normal">406</span>
-<span class="normal">407</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">407</span>
 <span class="normal">408</span>
 <span class="normal">409</span>
 <span class="normal">410</span>
@@ -999,7 +992,14 @@ in one notebook, and read and print its contents in the other:</p>
 <span class="normal">524</span>
 <span class="normal">525</span>
 <span class="normal">526</span>
-<span class="normal">527</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">FlowpyterOperator</span><span class="p">(</span><span class="n">PapermillOperator</span><span class="p">):</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">FlowpyterOperator</span><span class="p">(</span><span class="n">PapermillOperator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An operator that runs a parameterised Flowpyter notebook with a shared data area</span>
 
@@ -1686,7 +1686,14 @@ this can resolve permissions issues on the in container home directory.</p>
 <span class="normal">394</span>
 <span class="normal">395</span>
 <span class="normal">396</span>
-<span class="normal">397</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PapermillOperator</span><span class="p">(</span><span class="n">DockerOperator</span><span class="p">):</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">PapermillOperator</span><span class="p">(</span><span class="n">DockerOperator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An operator that runs a parameterised notebook in a specified container.</span>
 
@@ -1784,7 +1791,7 @@ this can resolve permissions issues on the in container home directory.</p>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nb_params</span> <span class="o">=</span> <span class="n">nb_params</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Creating docker task to run for </span><span class="si">{</span><span class="n">notebook_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Creating docker task to run for </span><span class="si">{</span><span class="n">notebook_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">notebook_uid</span> <span class="o">=</span> <span class="n">Variable</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;NOTEBOOK_UID&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">notebook_gid</span> <span class="o">=</span> <span class="n">Variable</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;NOTEBOOK_GID&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_user_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">notebook_uid</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">notebook_gid</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -1815,8 +1822,8 @@ this can resolve permissions issues on the in container home directory.</p>
         <span class="p">)</span>
         <span class="c1"># We call this as a macro because the Airflow plugin system doesn&#39;t seem to talk to the filter system</span>
         <span class="n">param_string</span> <span class="o">=</span> <span class="s2">&quot;-b {{macros.flowpytertask.b64_encode(task.nb_yaml)}} -b {{macros.flowpytertask.b64_encode(task.mount_yaml)}}&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Param string&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">param_string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Param string&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">param_string</span><span class="p">)</span>
         <span class="n">environment</span><span class="p">[</span><span class="s2">&quot;PYTHONPATH&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONTAINER_NOTEBOOK_DIR</span><span class="p">)</span><span class="si">}</span><span class="s2">:$</span><span class="se">{{</span><span class="s2">PYTHONPATH</span><span class="se">}}</span><span class="s2">&quot;</span>
         <span class="p">)</span>
@@ -1824,7 +1831,7 @@ this can resolve permissions issues on the in container home directory.</p>
             <span class="n">environment</span><span class="p">[</span><span class="s2">&quot;NB_UID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">notebook_uid</span>
             <span class="n">environment</span><span class="p">[</span><span class="s2">&quot;NB_GID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">notebook_gid</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;papermill </span><span class="si">{</span><span class="n">param_string</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">container_notebook_path</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">container_notebook_out_path</span><span class="si">}</span><span class="s2">&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
 
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
             <span class="n">command</span><span class="o">=</span><span class="n">command</span><span class="p">,</span>
@@ -1918,7 +1925,7 @@ this can resolve permissions issues on the in container home directory.</p>
             <span class="n">mount_params</span><span class="p">[</span><span class="n">mount_spec</span><span class="o">.</span><span class="n">path_variable</span><span class="p">]</span> <span class="o">=</span> <span class="n">mount_spec</span><span class="o">.</span><span class="n">effective_container_path</span>
 
         <span class="n">mount_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;Source&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mounts:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">mount_string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mounts:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">mount_string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">mount_params</span>
 
     <span class="k">def</span> <span class="nf">_setup_notebook_paths</span><span class="p">(</span>
@@ -1991,6 +1998,13 @@ this can resolve permissions issues on the in container home directory.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">_reserved_param_check</span><span class="p">(</span><span class="n">nb_params</span><span class="p">,</span> <span class="n">mount_params</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">Context</span><span class="p">):</span>
+        <span class="c1"># Logged here rather than in __init__, which runs on every DAG-file parse</span>
+        <span class="c1"># (filling the scheduler logs) and only sees the unrendered templates</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">notebook_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Mounts:</span><span class="se">\n</span><span class="s2"> &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;Source&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">m</span><span class="p">[</span><span class="s1">&#39;Target&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mounts</span><span class="p">)</span>
+        <span class="p">)</span>
         <span class="c1"># Various of yamls-to-be should now be rendered and hence real</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">create_path_on_host</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">host_notebook_out_base_dir</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">host_notebook_out_taskrun_dir</span>
