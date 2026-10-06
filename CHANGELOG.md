@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- `PapermillOperator` no longer logs at INFO (or prints) while it is being constructed. That code runs on every DAG-file parse and was filling the scheduler's DAG-processor logs (~80 MB/day on Flowbot). The notebook name and the bind mounts are now logged at execute time instead, with templates rendered.
+
 ## [1.4.1]
 
 ### Changed

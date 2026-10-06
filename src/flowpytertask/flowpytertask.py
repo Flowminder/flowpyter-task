@@ -181,7 +181,7 @@ class PapermillOperator(DockerOperator):
 
         self.mounts = []
         self.nb_params = nb_params
-        self.log.info(f"Creating docker task to run for {notebook_name}")
+        self.log.debug(f"Creating docker task to run for {notebook_name}")
         self.notebook_uid = Variable.get("NOTEBOOK_UID")
         self.notebook_gid = Variable.get("NOTEBOOK_GID")
         self._user_string = f"{self.notebook_uid}:{self.notebook_gid}"
@@ -212,8 +212,8 @@ class PapermillOperator(DockerOperator):
         )
         # We call this as a macro because the Airflow plugin system doesn't seem to talk to the filter system
         param_string = "-b {{macros.flowpytertask.b64_encode(task.nb_yaml)}} -b {{macros.flowpytertask.b64_encode(task.mount_yaml)}}"
-        self.log.info("Param string")
-        self.log.info(param_string)
+        self.log.debug("Param string")
+        self.log.debug(param_string)
         environment["PYTHONPATH"] = (
             f"{str(self.CONTAINER_NOTEBOOK_DIR)}:${{PYTHONPATH}}"
         )
@@ -221,7 +221,7 @@ class PapermillOperator(DockerOperator):
             environment["NB_UID"] = self.notebook_uid
             environment["NB_GID"] = self.notebook_gid
         command = f"papermill {param_string} {self.container_notebook_path} {self.container_notebook_out_path}"
-        print(command)
+        self.log.debug(command)
 
         super().__init__(
             command=command,
@@ -315,7 +315,7 @@ class PapermillOperator(DockerOperator):
             mount_params[mount_spec.path_variable] = mount_spec.effective_container_path
 
         mount_string = "\n".join(f"{m['Source']} to {m['Target']}" for m in self.mounts)
-        self.log.info(f"Mounts:\n {mount_string}")
+        self.log.debug(f"Mounts:\n {mount_string}")
         return mount_params
 
     def _setup_notebook_paths(
@@ -388,6 +388,13 @@ class PapermillOperator(DockerOperator):
         self._reserved_param_check(nb_params, mount_params)
 
     def execute(self, context: Context):
+        # Logged here rather than in __init__, which runs on every DAG-file parse
+        # (filling the scheduler logs) and only sees the unrendered templates
+        self.log.info(f"Running {self.notebook_name}")
+        self.log.info(
+            "Mounts:\n "
+            + "\n".join(f"{m['Source']} to {m['Target']}" for m in self.mounts)
+        )
         # Various of yamls-to-be should now be rendered and hence real
         self.create_path_on_host(
             self.host_notebook_out_base_dir, self.host_notebook_out_taskrun_dir
